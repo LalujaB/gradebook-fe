@@ -3,7 +3,7 @@
     <h1>All Gradebooks</h1>
     <div class="form-group">
       <label  class="form-check-label" for="term">Gradebook Search</label>
-      <input type="text" v-model="term" @keyup.enter="search(1)" autofocus  class="form-control" />
+      <input type="text" v-model="term" @keyup.enter="search(1)" autofocus placeholder="Search gradebook" class="form-control" />
       <button class="btn btn-md btn-primary mt-3" @click="search(1)">Search</button>
     </div>
       <table class="table table-striped table-bordered">
@@ -30,16 +30,8 @@
           </tr>
         </tbody>
       </table>
-      <button
-        class="btn btn-md btn-primary mr-2"
-        :disabled="currentPage === 1"
-        @click="getDiaries(false)"
-      >Previous</button>
-      <button
-        :disabled="currentPage >= lastPage"
-        class="btn btn-md btn-primary ml-2"
-        @click="getDiaries(true)"
-      >Next</button>
+      <button class="btn btn-md btn-primary mr-2" :disabled="currentPage === 1" @click="getDiaries(false)">Previous</button>
+      <button :disabled="currentPage >= lastPage" class="btn btn-md btn-primary ml-2" @click="getDiaries(true)">Next</button>
     </div>
 </template>
 

@@ -40,6 +40,6 @@ export const AuthModule = {
     },
     getError(state) {
       return state.error;
-    }
+    },
   }
 }

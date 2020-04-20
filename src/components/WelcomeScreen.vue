@@ -11,7 +11,7 @@
 </script>
 
 <style>
-    h3 {
+    h1 {
         font-weight: bold;
         padding: 2rem;
     }
